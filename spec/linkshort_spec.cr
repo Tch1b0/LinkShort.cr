@@ -26,7 +26,7 @@ describe LinkShort do
 
   it "Get certain Linker" do
     linkshort = LinkShort::LinkShort.new
-    linker = linkshort.from_id "1234"
+    linker = linkshort.from_short "1234"
     linker.should be_a(LinkShort::Linker)
     linker.original?.should be_false()
     linker.empty?.should be_false()
