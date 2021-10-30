@@ -26,6 +26,13 @@ module LinkShort
       parse_response HTTP::Client.put(@uri.to_s, body: data.to_json, headers: headers)
     end
 
+    # Make a `delete` request to the specified url + path
+    def delete(path : String, data : Hash(String, String)) : Hash(String, JSON::Any)
+      @uri.path = path
+      headers = HTTP::Headers.new.add "Content-type", "application/json"
+      parse_response HTTP::Client.delete(@uri.to_s, body: data.to_json, headers: headers)
+    end
+
     private def parse_response(res) : Hash(String, JSON::Any)
       if res.body.size > 0
         return JSON.parse(res.body).as_h

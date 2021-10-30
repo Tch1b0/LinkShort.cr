@@ -21,3 +21,6 @@ WebMock.stub(:get, "https://ls.johannespour.de/1234/json")
 
 WebMock.stub(:put, "https://ls.johannespour.de/1234")
   .to_return(status: 200)
+
+WebMock.stub(:delete, "https://ls.johannespour.de/1234")
+  .to_return(status: 200)

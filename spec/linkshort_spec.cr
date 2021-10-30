@@ -52,4 +52,18 @@ describe LinkShort do
     linker.destination = "https://example2.com"
     linker.destination.should eq("https://example2.com")
   end
+
+  it "Delete a certain shortcut directly using the LinkShort object" do
+    linkshort = LinkShort::LinkShort.new
+    linker = LinkShort::Linker.new "1234", "https://exmaple.com", "https://exmaple.com", linkshort, "1234"
+    linkshort.delete linker
+    linker.active?.should be_false()
+  end
+
+  it "Delete a certain shortcut indirectly using the Linker object" do
+    linkshort = LinkShort::LinkShort.new
+    linker = LinkShort::Linker.new "1234", "https://exmaple.com", "https://exmaple.com", linkshort, "1234"
+    linker.delete
+    linker.active?.should be_false()
+  end
 end

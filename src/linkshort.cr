@@ -4,6 +4,8 @@ require "./requester"
 module LinkShort
   VERSION = "0.1.0"
 
+  # Represents the LinkShort API.
+  # Is used for making requests and managing the `Linker` objects
   class LinkShort
     @uri : URI
 
@@ -12,9 +14,9 @@ module LinkShort
       @requester = Requester.new @uri
     end
 
-    # Get all shortcuts
-    def all : Array
-      res = @requester.get("links")
+    # Get all `Linker` objects
+    def all : Array(Linker)
+      res = @requester.get "links"
       linker_arr = [] of Linker
       res.each_key do |key|
         data = {
@@ -26,22 +28,22 @@ module LinkShort
       linker_arr
     end
 
-    # Get a shortcut by its id
+    # Get a `Linker` by its `id`
     def from_id(id : String) : Linker
       Linker.from_h @requester.get("#{id}/json"), @base_uri, self
     end
 
-    # Create a new shorctu
+    # Create a new `Linker` from a destination
     def create(destination : String) : Linker
       data = {
         "link" => destination,
       }
-      res = @requester.post("create", data)
+      res = @requester.post "create", data
       res["destination"] = JSON::Any.new destination
       Linker.from_h res, @base_uri, self
     end
 
-    # Edit the destination of a shortcut
+    # Edit the destination of a `Linker`
     def edit(linker : Linker, destination) : Linker
       raise("Unauthorized: The token is missing") if !linker.original?
 
@@ -49,8 +51,20 @@ module LinkShort
         "link"  => destination,
         "token" => linker.token,
       }
-      @requester.put(linker.short, data)
+      @requester.put linker.short, data
       linker.set_destination destination
+      linker
+    end
+
+    # Delete a certain `Linker`
+    def delete(linker : Linker) : Linker
+      raise("Unauthorized: The token is missing") if !linker.original?
+
+      data = {
+        "token" => linker.token,
+      }
+      @requester.delete linker.short, data
+      linker.short = ""
       linker
     end
   end
