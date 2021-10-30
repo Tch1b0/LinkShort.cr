@@ -26,7 +26,7 @@ linkshort = LinkShort::LinkShort.new
 ```
 
 Create a new `Linker`
-```
+```crystal
 linker = linkshort.create "the-link-i-want-to-shorten.com"
 ```
 
