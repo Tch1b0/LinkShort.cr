@@ -1,0 +1,14 @@
+name: linkshort
+version: 0.1.0
+
+authors:
+  - Tch1b0 <jpour3006@gmail.com>
+
+development_dependencies:
+  webmock:
+    github: manastech/webmock.cr
+    branch: master
+
+crystal: 1.2.1
+
+license: MIT
