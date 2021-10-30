@@ -9,6 +9,8 @@ module LinkShort
   class LinkShort
     @uri : URI
 
+    getter :base_uri
+
     def initialize(@base_uri : String = "https://ls.johannespour.de")
       @uri = URI.parse @base_uri
       @requester = Requester.new @uri
