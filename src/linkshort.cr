@@ -30,9 +30,9 @@ module LinkShort
       linker_arr
     end
 
-    # Get a `Linker` by its `id`
-    def from_id(id : String) : Linker
-      Linker.from_h @requester.get("#{id}/json"), @base_uri, self
+    # Get a `Linker` by its `short`
+    def from_short(short : String) : Linker
+      Linker.from_h @requester.get("#{short}/json"), @base_uri, self
     end
 
     # Create a new `Linker` from a destination

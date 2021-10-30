@@ -26,6 +26,14 @@ module LinkShort
       "#{@uri}#{'/' if !@uri.ends_with? '/'}#{@short}"
     end
 
+    # Update this object to the current state
+    def update
+      linker = @linkshort.from_short @short
+      if @destination != linker.destination
+        set_destination linker.destination
+      end
+    end
+
     # Shorcut for `LinkShort.edit`
     def edit(destination : String)
       @linkshort.edit self, destination
@@ -44,6 +52,11 @@ module LinkShort
     # Edit the destination via the assignment operator
     def destination=(destination : String)
       edit destination
+    end
+
+    # Compare this `Linker` with another `Linkere`
+    def ==(other : Linker)
+      @short == other.short
     end
 
     # Check wether this object is empty
