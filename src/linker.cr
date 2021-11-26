@@ -54,7 +54,7 @@ module LinkShort
       edit destination
     end
 
-    # Compare this `Linker` with another `Linkere`
+    # Compare this `Linker` with another `Linker`
     def ==(other : Linker)
       @short == other.short
     end
