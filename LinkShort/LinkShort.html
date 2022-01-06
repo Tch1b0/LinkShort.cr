@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.1.1">
+<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_name" content="linkshort">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="linkshort">
+  <title>LinkShort::LinkShort - linkshort master</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          linkshort
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="linkshort/LinkShort" data-name="linkshort">
+      <a href="../LinkShort.html">LinkShort</a>
+      
+        <ul>
+  
+  <li class=" " data-id="linkshort/LinkShort/Linker" data-name="linkshort::linker">
+      <a href="../LinkShort/Linker.html">Linker</a>
+      
+    </li>
+  
+  <li class=" current" data-id="linkshort/LinkShort/LinkShort" data-name="linkshort::linkshort">
+      <a href="../LinkShort/LinkShort.html">LinkShort</a>
+      
+    </li>
+  
+  <li class=" " data-id="linkshort/LinkShort/Requester" data-name="linkshort::requester">
+      <a href="../LinkShort/Requester.html">Requester</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> LinkShort::LinkShort
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../LinkShort/LinkShort.html">LinkShort::LinkShort</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Represents the LinkShort API.
+Is used for making requests and managing the <code><a href="../LinkShort/Linker.html">Linker</a></code> objects</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/Tch1b0/LinkShort.cr/blob/6d9f34e6639a908e3d32e37ac2a309ba933d902d/src/linkshort.cr#L9" target="_blank">
+        linkshort.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28base_uri%3AString%3D%22https%3A//ls.johannespour.de%22%29-class-method" class="signature"><strong>.new</strong>(base_uri : String = <span class="s">&quot;https://ls.johannespour.de&quot;</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#all%3AArray%28Linker%29-instance-method" class="signature"><strong>#all</strong> : Array(Linker)</a>
+        
+          <div class="summary"><p>Get all <code><a href="../LinkShort/Linker.html">Linker</a></code> objects</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#base_uri%3AString-instance-method" class="signature"><strong>#base_uri</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#create%28destination%3AString%29%3ALinker-instance-method" class="signature"><strong>#create</strong>(destination : String) : Linker</a>
+        
+          <div class="summary"><p>Create a new <code><a href="../LinkShort/Linker.html">Linker</a></code> from a destination</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete%28linker%3ALinker%29%3ALinker-instance-method" class="signature"><strong>#delete</strong>(linker : Linker) : Linker</a>
+        
+          <div class="summary"><p>Delete a certain <code><a href="../LinkShort/Linker.html">Linker</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#edit%28linker%3ALinker%2Cdestination%29%3ALinker-instance-method" class="signature"><strong>#edit</strong>(linker : Linker, destination) : Linker</a>
+        
+          <div class="summary"><p>Edit the destination of a <code><a href="../LinkShort/Linker.html">Linker</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from_short%28short%3AString%29%3ALinker-instance-method" class="signature"><strong>#from_short</strong>(short : String) : Linker</a>
+        
+          <div class="summary"><p>Get a <code><a href="../LinkShort/Linker.html">Linker</a></code> by its <code>short</code></p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(base_uri:String=&quot;https://ls.johannespour.de&quot;)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(base_uri : String = <span class="s">&quot;https://ls.johannespour.de&quot;</span>)
+
+        <a class="method-permalink" href="#new%28base_uri%3AString%3D%22https%3A//ls.johannespour.de%22%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Tch1b0/LinkShort.cr/blob/6d9f34e6639a908e3d32e37ac2a309ba933d902d/src/linkshort.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="all:Array(Linker)-instance-method">
+      <div class="signature">
+        
+        def <strong>all</strong> : Array(<a href="../LinkShort/Linker.html">Linker</a>)
+
+        <a class="method-permalink" href="#all%3AArray%28Linker%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get all <code><a href="../LinkShort/Linker.html">Linker</a></code> objects</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Tch1b0/LinkShort.cr/blob/6d9f34e6639a908e3d32e37ac2a309ba933d902d/src/linkshort.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="base_uri:String-instance-method">
+      <div class="signature">
+        
+        def <strong>base_uri</strong> : String
+
+        <a class="method-permalink" href="#base_uri%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Tch1b0/LinkShort.cr/blob/6d9f34e6639a908e3d32e37ac2a309ba933d902d/src/linkshort.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="create(destination:String):Linker-instance-method">
+      <div class="signature">
+        
+        def <strong>create</strong>(destination : String) : <a href="../LinkShort/Linker.html">Linker</a>
+
+        <a class="method-permalink" href="#create%28destination%3AString%29%3ALinker-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a new <code><a href="../LinkShort/Linker.html">Linker</a></code> from a destination</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Tch1b0/LinkShort.cr/blob/6d9f34e6639a908e3d32e37ac2a309ba933d902d/src/linkshort.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete(linker:Linker):Linker-instance-method">
+      <div class="signature">
+        
+        def <strong>delete</strong>(linker : <a href="../LinkShort/Linker.html">Linker</a>) : <a href="../LinkShort/Linker.html">Linker</a>
+
+        <a class="method-permalink" href="#delete%28linker%3ALinker%29%3ALinker-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Delete a certain <code><a href="../LinkShort/Linker.html">Linker</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Tch1b0/LinkShort.cr/blob/6d9f34e6639a908e3d32e37ac2a309ba933d902d/src/linkshort.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="edit(linker:Linker,destination):Linker-instance-method">
+      <div class="signature">
+        
+        def <strong>edit</strong>(linker : <a href="../LinkShort/Linker.html">Linker</a>, destination) : <a href="../LinkShort/Linker.html">Linker</a>
+
+        <a class="method-permalink" href="#edit%28linker%3ALinker%2Cdestination%29%3ALinker-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Edit the destination of a <code><a href="../LinkShort/Linker.html">Linker</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Tch1b0/LinkShort.cr/blob/6d9f34e6639a908e3d32e37ac2a309ba933d902d/src/linkshort.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="from_short(short:String):Linker-instance-method">
+      <div class="signature">
+        
+        def <strong>from_short</strong>(short : String) : <a href="../LinkShort/Linker.html">Linker</a>
+
+        <a class="method-permalink" href="#from_short%28short%3AString%29%3ALinker-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get a <code><a href="../LinkShort/Linker.html">Linker</a></code> by its <code>short</code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Tch1b0/LinkShort.cr/blob/6d9f34e6639a908e3d32e37ac2a309ba933d902d/src/linkshort.cr#L34" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
