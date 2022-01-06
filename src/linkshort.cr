@@ -2,7 +2,7 @@ require "./linker"
 require "./requester"
 
 module LinkShort
-  VERSION = "0.1.0"
+  VERSION = "1.0.0"
 
   # Represents the LinkShort API.
   # Is used for making requests and managing the `Linker` objects
